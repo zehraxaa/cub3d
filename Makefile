@@ -3,7 +3,13 @@
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
-SRC = main.c utils.c utils1.c map_check.c map_check_walls.c $(GNL_SRCS)
+SRC = main.c \
+	cub_parsing/controller.c \
+	cub_parsing/utils.c \
+	cub_parsing/utils1.c \
+	cub_parsing/map_check.c \
+	cub_parsing/map_check_walls.c \
+	$(GNL_SRCS)
 
 GNL_SRCS = get_next_line/get_next_line.c get_next_line/get_next_line_utils.c
 GNL_OBJS = $(GNL_SRCS:.c=.o)

@@ -21,6 +21,8 @@
 
 #define FLOOR '0'
 #define WALL '1'
+#define SCREEN_WIDTH 1920
+#define SCREE_HEIGHT 1080
 
 typedef struct s_map
 {
@@ -34,7 +36,6 @@ typedef struct s_map
 
 }	t_map;
 
-
 typedef struct s_map_comp //map components
 {
 	char	*no;
@@ -47,13 +48,44 @@ typedef struct s_map_comp //map components
 	int		ceiling_color[3];
 }	t_map_comp;
 
+typedef struct s_ray
+{
+	double	camera_x;	 // Işının kamera düzlemindeki x koordinatı (-1 ile 1 arası)
+	double	ray_dir_x;	// Işının yön vektörü
+	double	ray_dir_y;
+	int		map_x;	// Işının o an bulunduğu harita karesinin koordinatları
+	int		map_y;
+	double	side_dist_x;	// Işının başlangıç noktasından ilk x kenarına olan uzaklığı
+	double	side_dist_y;	// Işının başlangıç noktasından ilk y kenarına olan uzaklığı
+	double	delta_dist_x; // Işının bir x kenarından diğerine geçmesi için gereken uzaklık
+	double	delta_dist_y; // Işının bir y kenarından diğerine geçmesi için gereken uzaklık
+	double	perp_wall_dist; // Işının duvara olan dik uzaklığı (balık gözü efektini önlemek için)
+	int		step_x;	 // Işının x yönündeki adımı (+1 veya -1)
+	int		step_y;	 // Işının y yönündeki adımı (+1 veya -1)
+	int		hit;	// Duvara çarpıp çarpmadığımızı tutan bayrak
+	int		side;	 // Hangi yöndeki duvara çarptık? (0: Doğu/Batı, 1: Kuzey/Güney)
+	int		line_height;	// Çizilecek duvarın yüksekliği
+	int		draw_start;	 // Duvarın çizilmeye başlanacağı ekran y koordinatı
+	int		draw_end;	 // Duvarın çiziminin biteceği ekran y koordinatı
+}t_ray;
+
+typedef struct s_player
+{
+	double	pos_x;	// Oyuncunun tam pozisyonu
+	double	pos_y;
+	double	dir_x;	// Oyuncunun yön vektörü
+	double	dir_y;
+	double	plane_x; // Kamera düzlemi vektörü (FOV'u belirler)
+	double	plane_y;
+}	t_player;
+
 typedef struct s_cub3d
 {
 	t_map		*map;
 	t_map_comp	*comp;
-	int			player_x;
-	int			player_y;
 	char		player_dir;
+	t_player	player;
+	t_ray		ray;
 }	t_cub3d;
 
 typedef struct s_wall

@@ -115,7 +115,7 @@ int main(int ac, char **arg)
 		i++;
 	}
 	//is_map_valid(cub.map->map_lines, &cub);
-	//printf("NO: %s\n", cub.comp->no);
+	printf("NO: %s\n", cub.comp->no);
 	all_free(&cub);
 	return (0);
 }
