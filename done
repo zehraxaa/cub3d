@@ -1,0 +1,25 @@
+başlangıç.
+Kontrolleri yapacak fonksiyon yazımına başladım.
+
+-> map_check.c dosyası oluşturuldu ve harita kontrolleri eklendi (13/10/2025) 🎀
+->dizinde dosya mevcut mu ve sonu .cub ile mi bitiyor kontrolleri çalışıyor. Makefile
+eklendi çalıştırıp test edilebilir (14/10/2025)
+-> 2 tane free fonksiyonu ekledim. (free_map ve free_comp)(19/10/2025)
+-> Components ataması yapan fonksiyonları yazdım (20/10/2025)
+-> error_msg fonsiyonunda haritayı freeleme fonksiyonlarını çağırdım ve t_cub3d *cub parametresini 
+ekledim. error_msg fonksiyonunun diğer çağırıldığı yerlerde de değişikliği uyguladım. (22/10/2025)
+-> Haritada tab ile karşılaşılması durumunu handleladım (22/10/2025)
+
+TO DO LIST:
+->
+
+
+
+
+* Map parsing and validating ✅
+* Player direction vector and camera vector
+* DDA Algorithm
+* Ray Casting implementation
+* Camera plane vector
+* Image scaling and transformation for MLX
+* Player movement and rotation
