@@ -10,14 +10,14 @@ eklendi çalıştırıp test edilebilir (14/10/2025)
 ekledim. error_msg fonksiyonunun diğer çağırıldığı yerlerde de değişikliği uyguladım. (22/10/2025)
 -> Haritada tab ile karşılaşılması durumunu handleladım (22/10/2025)
 -> Haritada 0 lar arası boşluk, haritada başıboş 0 ve 1 olması durumunda artık hata basıyor (07/11/2025).
-
+--------------------------------------------------------------------------------------
 TO DO LIST:
 -> haritanın satırlarını yazdırma işleminde (map_lines[i]) sadece 1-0 lı kısmı yazdırması gerekiyormuş
 textures bilgileri map_comp kısmında tutuluyor çünkü. amaaan neyse ne
+-> "maps" player_none.cub'e kadar olan haritaları denedim. Ondan sonrası denenecek.
+ (library, matrix, sad_face yazanlar doğru harita, diğerleri hatalı)
 
-
-
-
+--------------------------------------------------------------------------------------
 * Map parsing and validating ✅
 * Player direction vector and camera vector
 * DDA Algorithm

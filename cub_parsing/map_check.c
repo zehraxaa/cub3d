@@ -6,13 +6,11 @@
 /*   By: aaydogdu <aaydogdu@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/13 22:00:41 by aaydogdu          #+#    #+#             */
-/*   Updated: 2025/10/29 11:24:09 by aaydogdu         ###   ########.fr       */
+/*   Updated: 2025/11/08 11:40:56 by aaydogdu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../cub3d.h"
-#include "../libft/libft.h"
-#include <string.h>
 
 int	cub_check(char *file_name)
 {
